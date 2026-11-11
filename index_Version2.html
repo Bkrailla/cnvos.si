@@ -1,0 +1,226 @@
+/* Refreshed white, blue, red and yellow theme */
+:root {
+  --primary: #1557a0;
+  --primary-hover: #10447f;
+  --bg: #f4f7fc;
+  --card: #ffffff;
+  --text: #152238;
+  --text-secondary: #45566f;
+  --muted: #64748b;
+  --border: #dce5f0;
+  --success-bg: #fff7d6;
+  --success-text: #735600;
+  --info-bg: #eaf2ff;
+  --info-text: #174b88;
+  --accent-red: #d83242;
+  --accent-yellow: #f5c842;
+}
+
+/* Subtle blue background and improved text rendering */
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Cleaner sticky header */
+header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 3px solid var(--accent-red);
+  box-shadow: 0 4px 18px rgba(21, 53, 92, 0.06);
+  backdrop-filter: blur(12px);
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+/* Language switcher */
+.lang-switcher {
+  background: #f5f8fd;
+  border-color: var(--border);
+}
+
+.lang-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Colorful but restrained hero */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 92% 10%, rgba(245, 200, 66, 0.22), transparent 28%),
+    radial-gradient(ellipse at 5% 90%, rgba(216, 50, 66, 0.08), transparent 30%),
+    linear-gradient(135deg, #fff 0%, #f2f7ff 100%);
+  border-bottom: 1px solid var(--border);
+  padding: 4rem 0 3.25rem;
+}
+
+.hero h1 {
+  max-width: 760px;
+  color: #123f75;
+}
+
+.hero p {
+  max-width: 640px;
+}
+
+.trust-bar {
+  gap: 0.7rem;
+}
+
+.trust-item {
+  padding: 0.45rem 0.75rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 0 2px 8px rgba(21, 53, 92, 0.04);
+}
+
+/* Give sections a little more breathing room */
+section {
+  padding: 3.5rem 0;
+}
+
+h2 {
+  color: #123f75;
+}
+
+/* Source cards */
+.source-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(21, 53, 92, 0.045);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.source-card:nth-child(4n + 1) { border-top: 4px solid var(--primary); }
+.source-card:nth-child(4n + 2) { border-top: 4px solid var(--accent-red); }
+.source-card:nth-child(4n + 3) { border-top: 4px solid var(--accent-yellow); }
+.source-card:nth-child(4n + 4) { border-top: 4px solid #6c91c5; }
+
+.source-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(21, 53, 92, 0.1);
+}
+
+/* Grant cards */
+.grant-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(21, 53, 92, 0.045);
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.grant-card:hover {
+  border-color: #b7cce7;
+  box-shadow: 0 8px 24px rgba(21, 53, 92, 0.08);
+}
+
+.badge-open {
+  background: #fff4c2;
+  color: #705400;
+}
+
+.badge-watch {
+  background: #eaf2ff;
+  color: #174b88;
+}
+
+/* More distinctive calls to action */
+.btn {
+  min-height: 40px;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 3px 8px rgba(21, 87, 160, 0.18);
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(21, 87, 160, 0.24);
+}
+
+.btn-secondary {
+  color: var(--accent-red);
+  border: 1px solid #e8aab0;
+}
+
+.btn-secondary:hover {
+  background: #fff4f4;
+  color: #b92535;
+  text-decoration: none;
+}
+
+/* Yellow-accented topic chips */
+.topic {
+  border-color: #e5d38b;
+  background: #fffdf5;
+}
+
+.topic:nth-child(3n) {
+  border-color: #edc0c4;
+  background: #fff8f8;
+}
+
+/* About panel */
+.about-box {
+  border-radius: 12px;
+  border-top: 4px solid var(--accent-yellow);
+  box-shadow: 0 5px 18px rgba(21, 53, 92, 0.05);
+}
+
+.note {
+  background: #fff9e6;
+  border-left-color: var(--accent-red);
+}
+
+/* Footer */
+footer {
+  background: #12345a;
+  border-top: 4px solid var(--accent-yellow);
+  color: #d5e0ee;
+}
+
+footer strong {
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: var(--accent-yellow);
+}
+
+.footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.16);
+  color: #b3c4d9;
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent-yellow);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 3rem 0 2.5rem;
+  }
+
+  .trust-item {
+    font-size: 0.8rem;
+  }
+
+  .grant-top {
+    flex-direction: column;
+  }
+}
